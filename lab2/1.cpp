@@ -1,5 +1,12 @@
 #include <iostream>
 
+bool is_prime(int number)
+{
+    for (int i=2;i<number;i++)
+    {if (number%i==0){return false;}}
+    return true;
+}
+
 using namespace std;
 main ()
 {
@@ -12,12 +19,10 @@ main ()
     cout<<"please introduce the number: ";
     cin>>number; cout<<endl;
 
-    for (int i=2;i<number;i++)
-    {
-        if (number%i==0){cout<<"the number's not prime ;/"<<endl;}
-        return 0;
-    }
-    cout<<"the number's  prime :>"<<endl;
+
+        if (is_prime(number)){cout<<"the number's prime :>"<<endl;}
+        else {cout<<"the number's not prime ;/"<<endl;}
+
 
     return 0;
 }
