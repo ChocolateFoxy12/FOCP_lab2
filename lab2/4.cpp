@@ -1,18 +1,34 @@
 #include <iostream>
 #include<fstream>
 #include<string>
+#include<vector>
 using namespace std;
+
+int read_int()
+{
+    cout<<"please introduce a number: ";
+    int n;
+    cin>>n;
+
+    return n;
+}
 
 int main()
 {
+    cout<<"how many numbers you wanna write?"<<endl;
+
+    int total_numbers=read_int();
+
+    vector<int> values;
+    for(int i=0;i<total_numbers;i++)
+        {
+         int tmp=read_int();
+         values.push_back(tmp);
+        }
+
     ofstream file;
-    file.open("new_file.txt");
-    file<<"this is the first line!\n";
-    file<<"this is the second line!\n";
-    file<<"this is the third line!\n";
-    file<<"this is the fourth line!\n";
-    file<<"this is the fith line!\n";
-    file<<"this is the sixth line!\n";
+    file.open("values.txt");
+    for(int i=0;i<total_numbers;i++){file<<values[i];}
     file.close();
 
     ifstream new_file("new_file.txt");
