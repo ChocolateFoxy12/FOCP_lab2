@@ -10,9 +10,9 @@ bool is_prime(int number)
 using namespace std;
 main ()
 {
-    //read a number from console
-    //figure out if the number is prime or not
-    //print the result to the console
+    //1 read a number from console
+    //2 figure out if the number is prime or not
+    //3 print the result to the console
 
     int number;
 
